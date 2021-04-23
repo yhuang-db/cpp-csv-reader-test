@@ -1,4 +1,4 @@
-# cpp-csv-reader-test (header-only)
+# cpp-csv-readers (header-only)
 
 [ben-strasser/fast-cpp-csv-parser](https://github.com/ben-strasser/fast-cpp-csv-parser)
 
