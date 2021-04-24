@@ -34,6 +34,26 @@ void use_fast_cpp_csv_parser_without_header() {
     }
 }
 
+void use_csv_parser_with_header() {
+    std::string file = "../data/with_header.csv";
+    csv::CSVReader reader(file);
+    for (auto &row: reader) {
+        std::cout << row["id"].get<int>() << "," << row["time"].get<std::string>() << "," << row["val"].get<double>() << std::endl;
+    }
+
+}
+
+void use_csv_parser_without_header() {
+    std::string file = "../data/no_header.csv";
+
+    csv::CSVFormat format;
+    format.column_names({"id", "time", "val"});
+    csv::CSVReader reader(file, format);
+    for (auto &row: reader) {
+        std::cout << row["id"].get<int>() << "," << row["time"].get<std::string>() << "," << row["val"].get<double>() << std::endl;
+    }
+}
+
 void use_csvmonkey_with_header() {
     std::string file = "../data/with_header.csv";
     MappedFileCursor stream;
