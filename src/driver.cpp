@@ -54,6 +54,24 @@ void use_csv_parser_without_header() {
     }
 }
 
+void use_rapidcsv_with_header() {
+    std::string file = "../data/with_header.csv";
+    rapidcsv::Document doc(file);
+    std::vector<int> ids = doc.GetColumn<int>("id");
+    for (auto id:ids) {
+        std::cout << id << std::endl;
+    }
+}
+
+void use_rapidcsv_without_header() {
+    std::string file = "../data/no_header.csv";
+    rapidcsv::Document doc(file);
+    std::vector<std::string> times = doc.GetColumn<std::string>(1);
+    for (const auto &time:times) {
+        std::cout << time << std::endl;
+    }
+}
+
 void use_csvmonkey_with_header() {
     std::string file = "../data/with_header.csv";
     MappedFileCursor stream;

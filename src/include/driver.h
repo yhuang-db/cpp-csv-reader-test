@@ -3,6 +3,7 @@
 //
 #include "csv.h"
 #include "csv_parser.h"
+#include "rapidcsv.h"
 #include "csvmonkey.h"
 
 #ifndef CPP_CSV_READERS_DRIVER_H
@@ -17,6 +18,11 @@ void use_fast_cpp_csv_parser_without_header();
 void use_csv_parser_with_header();
 
 void use_csv_parser_without_header();
+
+// d99kris/rapidcsv
+void use_rapidcsv_with_header();
+
+void use_rapidcsv_without_header();
 
 // dw/csvmonkey
 void use_csvmonkey_with_header();
