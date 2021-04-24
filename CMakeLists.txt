@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCES
         src/main.cpp
-        src/include/csvmonkey.h src/include/driver.h src/driver.cpp)
+        src/include/driver.h src/driver.cpp src/include/csvmonkey.h src/include/csv.h )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
